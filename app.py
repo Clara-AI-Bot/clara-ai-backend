@@ -4,12 +4,12 @@ from utils import download_if_missing
 
 # Descargar modelo y config si no están
 download_if_missing(
-    url="https://huggingface.co/Willyromero/clara-ai-models/resolve/main/model.pth",
+    url="https://github.com/Clara-AI-Bot/clara-ai-backend/releases/download/v1.0.0/model.pth",
     output_path="model/model.pth"
 )
 
 download_if_missing(
-    url="https://huggingface.co/Willyromero/clara-ai-models/resolve/main/config.json",
+    url="https://github.com/Clara-AI-Bot/clara-ai-backend/releases/download/v1.0.0/config.json",
     output_path="model/config.json"
 )
 
@@ -20,7 +20,7 @@ tts = TTS(
     gpu=True
 )
 
-# Ejecutar síntesis
+# Ejecutar síntesis de voz
 tts.tts_to_file(
     text="Hola, soy Clara, tu asistente de voz inteligente.",
     speaker_wav="voz_clara.wav",
