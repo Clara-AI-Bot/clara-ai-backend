@@ -1,3 +1,20 @@
-TTS @ git+https://github.com/coqui-ai/TTS.git@dev
+# requirements.txt
+
+# PyTorch y TorchAudio (si no están preinstalados en tu entorno)
+# Si tu Docker/RunPod ya trae PyTorch 2.x, puedes omitirlo
+torch>=2.0.0
 torchaudio
+
+# Coqui TTS desde la rama dev
+TTS @ git+https://github.com/coqui-ai/TTS.git@dev
+
+# Librerías básicas
 requests
+soundfile       # Para leer/escribir archivos WAV
+pydub           # Si manipulas audio (opcional)
+numpy
+unidecode       # A veces TTS la usa para normalizar texto
+inflect         # Manejo de plurales en texto
+
+# Si usas Gradio para interfaz web
+gradio
